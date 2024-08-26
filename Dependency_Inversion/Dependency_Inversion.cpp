@@ -15,7 +15,8 @@ public:
 class FileLogger : public ILogger
 {
 public:
-    void logMessage(const std::string& message) override {
+    void logMessage(const std::string& message) override
+    {
         std::ofstream logFile("log.txt", std::ios::app);
         logFile << message << std::endl;
         logFile.close();
